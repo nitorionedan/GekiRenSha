@@ -325,14 +325,7 @@ void BossA::Weak_Update()
 	if (big_time == 500)	Game::PlaySpread(pos.x, pos.y, GetRand(100), eSpread_SmallOrange);
 	
 	// ‘å‚«‚¢’e
-	if (big_time == 500)
-	{
-		PlaySoundMem(hs_big, DX_PLAYTYPE_BACK);
-		shot3->Fire(10, std::atan2(Game::GetPlayerPos().y - pos.y, Game::GetPlayerPos().x - pos.x));
-	}
-
-	// ‘å‚«‚¢’e
-	if(big_time == 530)
+	if (big_time == 500 || big_time == 530)
 	{
 		PlaySoundMem(hs_big, DX_PLAYTYPE_BACK);
 		shot3->Fire(10, std::atan2(Game::GetPlayerPos().y - pos.y, Game::GetPlayerPos().x - pos.x));
@@ -452,3 +445,5 @@ void BossA::Damage(const int& point)
 		Game::PlaySpread(pos.x, pos.y, GetRand(100), eSpread_BigAll);
 	}
 }
+
+// EOF
