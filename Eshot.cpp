@@ -69,9 +69,10 @@ void Eshot::Update()
 
 void Eshot::Draw()
 {
+	// ”­ŽËŒõ
 	if (c_fire1->Remainder(A_INTERVAL) == 0 &&
 		s_isFire1 &&
-		BossA::IsDead())
+		!BossA::IsDead())
 	{
 		DrawRotaGraph(x_fireA[0], y_fireA[0], 2.0, 0.0, hg_fireA, true);
 		DrawRotaGraph(x_fireA[1], y_fireA[1], 2.0, 0.0, hg_fireA, true);
