@@ -29,6 +29,7 @@ Bomb::Bomb()
 
 Bomb::~Bomb()
 {
+	DeleteSoundMem(sh);
 }
 
 
